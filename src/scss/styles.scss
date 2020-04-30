@@ -1,0 +1,166 @@
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+$red: #D20A32;
+$black: #191919;
+$white: rgb(241, 241, 241);
+$blue: rgb(2, 171, 255);
+$grey: rgb(119, 119, 119);
+$font-small: 1em;
+$font-medium: 1.2em;
+$font-big: 3em;
+$card-size: 30%;
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Thin.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+
+body {
+  font-family: "Roboto";
+  background-color: $black;
+  color: $white;
+  height: 100vh;
+  font-size: $font-medium;
+}
+
+h1 {
+  font-family: "Roboto Bold";
+  color: $red;
+  font-weight: bolder;
+}
+
+#pageContent {
+  display: flex;
+  flex-wrap: wrap;
+
+// Page Details
+  #details-container {
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+  margin: auto;
+
+    #game-title {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      font-size: $font-big;
+      text-align: center;
+
+      h1 {
+        margin: 0;
+        color: $white;
+      }
+    }
+
+    #platform {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .platforms {
+      margin: 10px;
+      height: 25px;
+      opacity: 0.7;
+    }
+
+    #main-img {
+      width: 100%;
+      height: auto;
+      text-align: center;
+      img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+      }
+    }
+
+    #description {
+
+    }
+
+
+
+    .grey {
+      color: $grey;
+    }
+  }
+}
+
+#search {
+  font-family: "Roboto Bold";
+  font-size: $font-small;
+  width: 200px;
+  height: 30px;
+  border-radius: 40px;
+  border: 1px solid $red;
+  background-color: $black;
+  color: $white;
+  padding-left: 40px;
+}
+
+#search-bar {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+#search-icon {
+  position: absolute;
+  left : 10px;
+  top: 6px;
+  color: $white;
+}
+
+.card {
+  width: $card-size;
+  margin: 1%;
+  height: auto;
+  padding-bottom: 1em;
+  border: $white solid 1px;
+  border-radius: 4px;
+  text-align: center;
+  
+
+  img {
+    width: 100%;
+    height: 25vw;
+    object-fit: cover; 
+  }
+}
+
+#game-name {
+  color: $white;
+}
+
+#show-more {
+  text-align: center;
+  margin-right: 40%;
+  margin-left: 40%;
+}
+
+a, a:visited {
+	text-decoration: none;
+	position: relative;
+	color: $white;
+	
+	&:after {
+		content: '';
+		height: 1px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		background: $white;
+		transition: 0.2s;
+	}
+
+	&:hover:after {
+		width: 100%;
+	}
+}
