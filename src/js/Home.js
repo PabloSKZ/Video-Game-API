@@ -40,7 +40,7 @@ search.addEventListener('click', e => {
 // Card
 const card = e => {
   return `
-  <div class="card">
+  <div class="card"  data-aos="fade-up">
   <a href="#pagedetail/${e.slug}" id="game-name">
     <img src="${e.background_image}">
     ${e.name}</a> 

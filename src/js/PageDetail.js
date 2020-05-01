@@ -47,7 +47,7 @@ const PageDetail = (argument = "") => {
           <div id="genres"><span class="grey">Genres:</span> ${genres.join(', ')}</div>
           <div id="tags"><span class="grey">Tags:</span> ${tags.join(', ')}</div>
           <div id="publishers"><span class="grey">Publishers:</span> ${publishers.join(', ')}</div>
-          <div id="esrb_rating"><span class="grey">Esrb Rating:</span> ${response.esrb_rating.name}</div>
+          
       </div>
       <div id="gallery">
       </div>

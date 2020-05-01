@@ -126,6 +126,9 @@ h1 {
       margin-bottom: 25px;
       width: 50%;
       margin:auto;
+      @include phone {    
+        width: 80%;
+      }
     }
   }
 }
@@ -141,8 +144,11 @@ h1 {
 #side-container {
   width: 30%;
   margin: auto;
+  margin-top: 100px;
   @include phone {    
     width: 80%;
+    margin: auto;
+    margin-top: 20px;
  }
 }
 
@@ -187,13 +193,17 @@ h1 {
   border: $white solid 1px;
   border-radius: 4px;
   text-align: center;
-  
+  opacity: 0.9 !important;
 
   img {
     width: 100%;
     height: 25vw;
     object-fit: cover; 
   }
+}
+
+.card:hover {
+  opacity: 1 !important;
 }
 
 #game-name {

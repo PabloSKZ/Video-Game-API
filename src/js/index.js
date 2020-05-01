@@ -1,6 +1,10 @@
 import '@fortawesome/fontawesome-free/js/all.js';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 import "../scss/styles.scss";
 import routes from './routes'
+
+AOS.init();
 
 let pageArgument;
 
