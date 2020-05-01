@@ -1,11 +1,7 @@
 let showNb = 9;
 
-let searchBar = document.getElementById("search-bar");
-searchBar.innerHTML = `<input type="search" name="Search" id="search">
-  <i class="fa fa-search" id="search-icon"></i>`
-
 const Home = (argument = "") => {
-  console.log(showNb)
+
   pageContent.innerHTML = ""
   if (argument === "") {
     fetch("https://api.rawg.io/api/games?page=1")
@@ -35,12 +31,19 @@ search.addEventListener('input', e => {
   Home(searchValue);
 });
 
+search.addEventListener('click', e => {
+  showNb = 9;
+  searchValue = document.getElementById("search").value
+  Home(searchValue);
+});
+
 // Card
 const card = e => {
   return `
   <div class="card">
+  <a href="#pagedetail/${e.slug}" id="game-name">
     <img src="${e.background_image}">
-    <a href="#pagedetail/${e.slug}" id="game-name">${e.name}</a> 
+    ${e.name}</a> 
   </div>
   `
 }

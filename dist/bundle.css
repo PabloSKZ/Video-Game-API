@@ -4555,6 +4555,7 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
 
+@charset "UTF-8";
 @font-face {
   font-family: "Roboto";
   src: url(fonts/c38fab23fc1c36894f10dd8014479b53.ttf);
@@ -4584,8 +4585,13 @@ h1 {
 #pageContent #details-container {
   display: flex;
   flex-flow: column;
-  width: 50%;
+  width: 60%;
   margin: auto;
+}
+@media (max-width: 800px) {
+  #pageContent #details-container {
+    width: 80%;
+  }
 }
 #pageContent #details-container #game-title {
   display: flex;
@@ -4607,6 +4613,34 @@ h1 {
   height: 25px;
   opacity: 0.7;
 }
+#pageContent #details-container #rating {
+  text-align: center;
+  margin-bottom: 25px;
+}
+#pageContent #details-container #stars-outer {
+  position: relative;
+  display: inline-block;
+}
+#pageContent #details-container #stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+#pageContent #details-container #stars-outer::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #adabab;
+}
+#pageContent #details-container #stars-inner::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #e0bb12;
+}
 #pageContent #details-container #main-img {
   width: 100%;
   height: auto;
@@ -4617,8 +4651,33 @@ h1 {
   max-width: 500px;
   height: auto;
 }
-#pageContent #details-container .grey {
+#pageContent #details-container #description {
+  margin-bottom: 25px;
+  width: 50%;
+  margin: auto;
+}
+
+.grey {
   color: #777777;
+}
+
+#details {
+  margin-bottom: 25px;
+}
+
+#side-container {
+  width: 30%;
+  margin: auto;
+}
+@media (max-width: 800px) {
+  #side-container {
+    width: 80%;
+  }
+}
+
+#gallery img {
+  width: 49%;
+  margin: auto;
 }
 
 #search {

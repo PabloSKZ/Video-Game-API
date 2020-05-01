@@ -1,11 +1,17 @@
 $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/css/all.css';
 
+@mixin phone {
+  @media (max-width: 800px) { @content; }
+}
+
 $red: #D20A32;
 $black: #191919;
 $white: rgb(241, 241, 241);
 $blue: rgb(2, 171, 255);
 $grey: rgb(119, 119, 119);
+$light-grey: rgb(173, 171, 171);
+$yellow: #e0bb12;
 $font-small: 1em;
 $font-medium: 1.2em;
 $font-big: 3em;
@@ -43,7 +49,10 @@ h1 {
   #details-container {
   display: flex;
   flex-flow: column;
-  width: 50%;
+  width: 60%;
+  @include phone {    
+    width: 80%;
+ }
   margin: auto;
 
     #game-title {
@@ -70,6 +79,39 @@ h1 {
       opacity: 0.7;
     }
 
+    #rating {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    #stars-outer {
+      position: relative;
+      display: inline-block;
+    }
+
+    #stars-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+    }
+
+    #stars-outer::before {
+      content: '\f005 \f005 \f005 \f005 \f005 ';
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      color: $light-grey;
+    }
+
+    #stars-inner::before {
+      content: '\f005 \f005 \f005 \f005 \f005 ';
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      color: $yellow;
+    }
+
     #main-img {
       width: 100%;
       height: auto;
@@ -80,16 +122,36 @@ h1 {
         height: auto;
       }
     }
-
     #description {
-
+      margin-bottom: 25px;
+      width: 50%;
+      margin:auto;
     }
+  }
+}
+
+.grey {
+  color: $grey;
+}
+
+#details {
+  margin-bottom: 25px;
+}
+
+#side-container {
+  width: 30%;
+  margin: auto;
+  @include phone {    
+    width: 80%;
+ }
+}
 
 
+#gallery {
 
-    .grey {
-      color: $grey;
-    }
+  img {
+    width: 49%;
+    margin: auto;
   }
 }
 
