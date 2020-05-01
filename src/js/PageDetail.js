@@ -22,7 +22,7 @@ const PageDetail = (argument = "") => {
 
     pageContent.innerHTML = `
     <a href=""><i class="fas fa-arrow-left fa-3x" style="top: 15px;"></i></a>
-    <div id="details-container">
+    <div id="details-container" data-aos="fade-down">
       <div id="game-title">
         <h1>${response.name}</h1>
       </div>
@@ -39,7 +39,7 @@ const PageDetail = (argument = "") => {
       ${response.description}
       </div>     
     </div>
-    <div id="side-container">
+    <div id="side-container" data-aos="fade-up">
       <div id="details">
           <div id="released"><span class="grey">Released:</span> ${response.released}</div>
           <div id="website"><span class="grey">Website:</span> ${response.website}</div>
